@@ -1,7 +1,7 @@
 SublimeLinter-latex
 =========================
 
-This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter3) provides an interface to [LaTeX](http://baruch.ev-en.org/proj/chktex/). It will be used with files that have the “LaTeX” syntax.
+This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter3) provides an interface to [chktex](http://baruch.ev-en.org/proj/chktex/). It will be used with files that have use LaTeX syntax.
 
 ## Installation
 
