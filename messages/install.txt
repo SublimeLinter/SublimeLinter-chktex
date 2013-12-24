@@ -1,0 +1,6 @@
+SublimeLinter-latex
+-------------------------------
+
+This linter plugin for SublimeLinter provides an interface to LaTeX.
+
+For more information, please see https://github.com/adamaltmejd/SublimeLinter-latex.
