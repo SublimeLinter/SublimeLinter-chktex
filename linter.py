@@ -20,8 +20,8 @@ class Latex(PythonLinter):
     Todo:
         - user settings
         - ignore some warnings
-        - allow checking of latex scope in .Rnw files
-        - combine with lacheck
+        - allow checking of latex scope in eg .Rnw (knitr) files
+        - combine with lacheck?
 
     """
 
