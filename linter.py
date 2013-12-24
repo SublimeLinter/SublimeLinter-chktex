@@ -14,9 +14,20 @@ from SublimeLinter.lint import PythonLinter, util
 
 class Latex(PythonLinter):
 
-    """Provides an interface to chktex."""
+    """ Provides an interface to use chktex in SublimeText with SublimeLinter3.
+
+    Chktex uses stdin for input and stdout for output.
+    Todo:
+        - user settings
+        - ignore some warnings
+        - allow checking of latex scope in .Rnw files
+        - combine with lacheck
+
+    """
 
     syntax = ('latex', 'latexing')
+    selectors = {}
+
     cmd = 'chktex "-f%l:%c %k %m\n" '
     executable = None
     regex = (
@@ -24,11 +35,12 @@ class Latex(PythonLinter):
         r'(?:(?P<error>Error)|(?P<warning>Warning)) '
         r'(?P<message>.+)'
     )
+
     multiline = False
+    error_stream = util.STREAM_STDOUT
+
     line_col_base = (1, 1)
     tempfile_suffix = None
-    error_stream = util.STREAM_STDOUT
-    selectors = {}
     word_re = None
     defaults = {}
     inline_settings = None
