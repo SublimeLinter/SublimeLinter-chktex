@@ -12,7 +12,7 @@
 from SublimeLinter.lint import PythonLinter, util
 
 
-class Latex(PythonLinter):
+class chktex(PythonLinter):
 
     """ Provides an interface to use chktex in SublimeText with SublimeLinter3.
 
