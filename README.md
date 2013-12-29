@@ -24,6 +24,11 @@ For general information on how SublimeLinter works with settings, please see [Se
 
 In addition to the standard SublimeLinter settings, SublimeLinter-chktex provides its own settings. Those marked as “Inline Setting” or “Inline Override” may also be [used inline](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Settings#inline-settings).
 
+|Setting|Description|Inline Setting|Inline Override|
+|:------|:----------|:------------:|:-------------:|
+|nowarn|A comma-separated list of warnings to ignore. | |
+|erroron|A comma-separated list of warnings to output as errors. | |
+
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
 

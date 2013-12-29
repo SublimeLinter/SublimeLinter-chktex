@@ -1,0 +1,17 @@
+#####################################################################
+# chktexrc for SublimeLinter-chktex - for more available settings,
+# see the chktexrc provided with chktex
+
+#####################################################################
+#
+# These  environments  contains  material  which  contents  should be
+# ignored.
+#
+# We will automagically append a * to each keyword.
+#
+
+VerbEnvir
+{
+	align
+	itemize
+}

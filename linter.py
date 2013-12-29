@@ -6,6 +6,8 @@
 # Copyright (c) 2013 Adam Altmejd
 # License: MIT
 #
+# - Todo: make chktex ignore R code blocks in Knitr/Sweave environments instead
+#         of linting scopes separately.
 
 """Uses chktex to lint LaTeX files."""
 
@@ -22,7 +24,7 @@ class Chktex(PythonLinter):
         'knitr-rnw': 'text.tex.latex.knitr - meta.block.parameters.knitr - source.r.embedded.knitr'
         }
 
-    cmd = 'chktex "-f%l:%c %k %k %n: %m\n" *'
+    cmd = 'chktex -wall --localrc .chktexrc "-f%l:%c %k %k %n: %m\n"'
     regex = (
         r'^(?P<line>\d+):(?P<col>\d+) '
         r'(?:(?P<error>Error)|(?P<warning>Warning)) '
@@ -31,5 +33,6 @@ class Chktex(PythonLinter):
     error_stream = util.STREAM_STDOUT
     config_file = ('--localrc', '.chktexrc')
     defaults = {
-        '--nowarn,+': '3'
+        '--nowarn:,+': [22, 30],
+        '--erroron:,+': [16]
     }
