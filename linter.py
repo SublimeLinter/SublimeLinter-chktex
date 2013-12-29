@@ -12,7 +12,7 @@
 from SublimeLinter.lint import PythonLinter, util
 
 
-class chktex(PythonLinter):
+class Chktex(PythonLinter):
 
     """ Provides an interface to use chktex in SublimeText with SublimeLinter3.
 
@@ -25,25 +25,17 @@ class chktex(PythonLinter):
 
     """
 
-    syntax = ('latex', 'latexing')
-    selectors = {}
+    syntax = ('latex', 'latexing', 'latexing (knitr)')
+    selectors = {'latexing (knitr)': }
 
     cmd = 'chktex "-f%l:%c %k %m\n" '
-    executable = None
     regex = (
         r'^(?P<line>\d+):(?P<col>\d+) '
         r'(?:(?P<error>Error)|(?P<warning>Warning)) '
         r'(?P<message>.+)'
     )
-
-    multiline = False
     error_stream = util.STREAM_STDOUT
 
-    line_col_base = (1, 1)
-    tempfile_suffix = None
-    word_re = None
-    defaults = {}
-    inline_settings = None
-    inline_overrides = None
-    module = None
-    check_version = False
+    defaults = {
+
+    }

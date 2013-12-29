@@ -6,7 +6,7 @@ This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeL
 ## Installation
 
 ### Linter installation
-Before installing this plugin, you must ensure that `chktex` is installed on your system.
+Before installing this plugin, you must ensure that `chktex` is installed on your system. Chktex is available on [CTAN](http://www.ctan.org/pkg/chktex) and comes with many TeX packages. For example [TeX Live](http://www.tug.org/texlive/) starting with TeX Live 2011.
 
 Now you can proceed to install the SublimeLinter-chktex plugin.
 
