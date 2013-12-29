@@ -14,28 +14,22 @@ from SublimeLinter.lint import PythonLinter, util
 
 class Chktex(PythonLinter):
 
-    """ Provides an interface to use chktex in SublimeText with SublimeLinter3.
+    """ Provides an interface to use chktex in SublimeText with SublimeLinter3."""
 
-    Chktex uses stdin for input and stdout for output.
-    Todo:
-        - user settings
-        - ignore some warnings
-        - allow checking of latex scope in eg .Rnw (knitr) files
-        - combine with lacheck?
+    syntax = ('latex', 'latexing', 'latex (knitr)', 'knitr-rnw')
+    selectors = {
+        'latex (knitr)': 'text.tex.latex.knitr.ing - meta.block.parameters.knitr - source.r.embedded.knitr',
+        'knitr-rnw': 'text.tex.latex.knitr - meta.block.parameters.knitr - source.r.embedded.knitr'
+        }
 
-    """
-
-    syntax = ('latex', 'latexing', 'latexing (knitr)')
-    selectors = {'latexing (knitr)': }
-
-    cmd = 'chktex "-f%l:%c %k %m\n" '
+    cmd = 'chktex "-f%l:%c %k %k %n: %m\n" *'
     regex = (
         r'^(?P<line>\d+):(?P<col>\d+) '
         r'(?:(?P<error>Error)|(?P<warning>Warning)) '
         r'(?P<message>.+)'
     )
     error_stream = util.STREAM_STDOUT
-
+    config_file = ('--localrc', '.chktexrc')
     defaults = {
-
+        '--nowarn,+': '3'
     }
