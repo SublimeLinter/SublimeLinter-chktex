@@ -22,9 +22,9 @@ class Chktex(PythonLinter):
     selectors = {
         'latex (knitr)': 'text.tex.latex.knitr.ing - meta.block.parameters.knitr - source.r.embedded.knitr',
         'knitr-rnw': 'text.tex.latex.knitr - meta.block.parameters.knitr - source.r.embedded.knitr'
-        }
+    }
 
-    cmd = 'chktex -wall --localrc .chktexrc "-f%l:%c %k %k %n: %m\n"'
+    cmd = 'chktex -wall --localrc .chktexrc "-f%l:%c %k %k %n: %m\n" *'
     regex = (
         r'^(?P<line>\d+):(?P<col>\d+) '
         r'(?:(?P<error>Error)|(?P<warning>Warning)) '
@@ -36,3 +36,5 @@ class Chktex(PythonLinter):
         '--nowarn:,+': [22, 30],
         '--erroron:,+': [16]
     }
+    inline_overrides = ('nowarn', 'erroron')
+    comment_re = r'\s*%'

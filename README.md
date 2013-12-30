@@ -22,12 +22,12 @@ To install via Package Control, do the following:
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Settings). For information on generic linter settings, please see [Linter Settings](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Linter-Settings).
 
-In addition to the standard SublimeLinter settings, SublimeLinter-chktex provides its own settings. Those marked as “Inline Setting” or “Inline Override” may also be [used inline](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Settings#inline-settings).
+In addition to the standard SublimeLinter settings, SublimeLinter-chktex provides its own settings, which may also be [used inline](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Settings#inline-settings) as overrides.
 
-|Setting|Description|Inline Setting|Inline Override|
-|:------|:----------|:------------:|:-------------:|
-|nowarn|A comma-separated list of warnings to ignore. | |
-|erroron|A comma-separated list of warnings to output as errors. | |
+|Setting|Description|
+|:------|:----------|
+|nowarn|A comma-separated list of warnings to ignore. |
+|erroron|A comma-separated list of warnings to output as errors. |
 
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
