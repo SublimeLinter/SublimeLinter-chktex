@@ -1,9 +1,10 @@
 SublimeLinter-chktex
 =========================
 
-This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter3) provides an interface to [chktex](http://baruch.ev-en.org/proj/chktex/). It will be used with files that have use LaTeX (or LaTeXing) syntax.
+This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to [chktex](http://baruch.ev-en.org/proj/chktex/). It will be used with files that have use LaTeX (or LaTeXing) syntax.
 
 ## Installation
+SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here](http://sublimelinter.readthedocs.org/en/latest/installation.html).
 
 ### Linter installation
 Before installing this plugin, you must ensure that `chktex` is installed on your system. Chktex is available on [CTAN](http://www.ctan.org/pkg/chktex) and comes with many TeX packages. For example [TeX Live](http://www.tug.org/texlive/) starting with TeX Live 2011.
@@ -20,9 +21,9 @@ To install via Package Control, do the following:
 1. When the plugin list appears, type `chktex`. Among the entries you should see `SublimeLinter-chktex`. If that entry is not highlighted, use the keyboard or mouse to select it.
 
 ## Settings
-For general information on how SublimeLinter works with settings, please see [Settings](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Settings). For information on generic linter settings, please see [Linter Settings](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Linter-Settings).
+For general information on how SublimeLinter works with settings, please see [Settings](http://sublimelinter.readthedocs.org/en/latest/settings.html). For information on generic linter settings, please see [Linter Settings](http://sublimelinter.readthedocs.org/en/latest/linter_settings.html).
 
-In addition to the standard SublimeLinter settings, SublimeLinter-chktex provides its own settings, which may also be [used inline](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Settings#inline-settings) as overrides.
+In addition to the standard SublimeLinter settings, SublimeLinter-chktex provides its own settings, which may also be [used inline](http://sublimelinter.readthedocs.org/en/latest/settings.html#inline-settings) as overrides.
 
 |Setting|Description|
 |:------|:----------|
