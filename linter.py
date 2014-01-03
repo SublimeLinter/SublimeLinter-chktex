@@ -24,7 +24,7 @@ class Chktex(PythonLinter):
         'knitr-rnw': 'text.tex.latex.knitr - meta.block.parameters.knitr - source.r.embedded.knitr'
     }
 
-    cmd = 'chktex -wall --localrc .chktexrc "-f%l:%c %k %k %n: %m\n" *'
+    cmd = 'chktex -wall --localrc .chktexrc "-f%l:%c %k %k %n: %m\n"'
     error_stream = util.STREAM_STDOUT
     regex = (
         r'^(?P<line>\d+):(?P<col>\d+) '
