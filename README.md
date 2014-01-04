@@ -23,12 +23,14 @@ To install via Package Control, do the following:
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings](http://sublimelinter.readthedocs.org/en/latest/settings.html). For information on generic linter settings, please see [Linter Settings](http://sublimelinter.readthedocs.org/en/latest/linter_settings.html).
 
-In addition to the standard SublimeLinter settings, SublimeLinter-chktex provides its own settings, which may also be [used inline](http://sublimelinter.readthedocs.org/en/latest/settings.html#inline-settings) as overrides.
+In addition to the standard SublimeLinter settings, SublimeLinter-chktex provides its own settings, which may also be [used inline](http://sublimelinter.readthedocs.org/en/latest/settings.html#inline-settings) as overrides. For a full list of warnings see the [chktex manual](http://ctan.uib.no/support/chktex/ChkTeX.pdf).
 
-|Setting|Description|
-|:------|:----------|
-|nowarn|A comma-separated list of warnings to ignore. |
-|erroron|A comma-separated list of warnings to output as errors. |
+By default, SublimeLinter-chktex ignores Warning 22 (Comment displayed) and Warning 30 (Multiple spaces detected in output). It also sets Warning 16 (Mathmode is still on at end of LaTeX file) as an error.
+
+|Setting|Description|Default|
+|:------|:----------|:--------|
+|nowarn|A comma-separated list of warnings to ignore. | [22,30] |
+|erroron|A comma-separated list of warnings to output as errors. | [16] |
 
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
