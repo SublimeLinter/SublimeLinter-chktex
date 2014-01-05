@@ -18,7 +18,7 @@ class Chktex(PythonLinter):
 
     """ Provides an interface to use chktex in SublimeText with SublimeLinter3."""
 
-    syntax = ('latex', 'latexing', 'latex (knitr)', 'knitr-rnw')
+    syntax = ('latex', 'latexing', 'latex (knitr)', 'knitr-rnw', 'latex beamer', 'latexing beamer')
     selectors = {
         'latex (knitr)': 'text.tex.latex.knitr.ing - meta.block.parameters.knitr - source.r.embedded.knitr',
         'knitr-rnw': 'text.tex.latex.knitr - meta.block.parameters.knitr - source.r.embedded.knitr'
@@ -32,7 +32,7 @@ class Chktex(PythonLinter):
         r'(?P<message>.+)'
     )
 
-    config_file = ('--localrc', '.chktexrc')
+    config_file = ('--localrc', 'chktexrc')
     defaults = {
         '--nowarn:,+': [22, 30],
         '--erroron:,+': [16]
