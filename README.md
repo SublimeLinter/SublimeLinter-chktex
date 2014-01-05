@@ -10,9 +10,13 @@ SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 
 Before installing this plugin, you must ensure that `chktex` is installed on your system. Chktex is available on [CTAN](http://www.ctan.org/pkg/chktex) and comes with many TeX distributions. For example [TeX Live](http://www.tug.org/texlive/) starting with TeX Live 2011.
 
 The installation under Windows (miktex) is a little bit challenging:
+
 1. Install [cygwin](http://cygwin.com/install.html) with `make` and `gcc compiler` 
+
 2. Download [chktex](http://www.ctan.org/tex-archive/support/chktex) and save in home directory of cygwin (default is C:\cygwin\home\USER\)
+
 3. In the cygwin bash, run `configure` and `make`
+
 4. The resulting `chktex.exe` along with `cygwin1.dll` should now be saved in a directory which is registered in the PATH environment variable (for example %MiKTeX Install%\miktex\bin\ is appropriate)
 
 Now you can proceed to install the SublimeLinter-chktex plugin.
