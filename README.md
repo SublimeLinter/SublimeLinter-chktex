@@ -7,7 +7,17 @@ This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) pro
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here](http://sublimelinter.readthedocs.org/en/latest/installation.html).
 
 ### Linter installation
-Before installing this plugin, you must ensure that `chktex` is installed on your system. Chktex is available on [CTAN](http://www.ctan.org/pkg/chktex) and comes with many TeX packages. For example [TeX Live](http://www.tug.org/texlive/) starting with TeX Live 2011.
+Before installing this plugin, you must ensure that `chktex` is installed on your system. Chktex is available on [CTAN](http://www.ctan.org/pkg/chktex) and comes with many TeX distributions. For example [TeX Live](http://www.tug.org/texlive/) starting with TeX Live 2011.
+
+The installation under Windows (miktex) is a little bit challenging:
+
+1. Install [cygwin](http://cygwin.com/install.html) with `make` and `gcc compiler` 
+
+2. Download [chktex](http://www.ctan.org/tex-archive/support/chktex) and save in home directory of cygwin (default is C:\cygwin\home\USER\)
+
+3. In the cygwin bash, run `configure` and `make`
+
+4. The resulting `chktex.exe` along with `cygwin1.dll` should now be saved in a directory which is registered in the PATH environment variable (for example %MiKTeX Install%\miktex\bin\ is appropriate)
 
 Now you can proceed to install the SublimeLinter-chktex plugin.
 
@@ -18,7 +28,7 @@ To install via Package Control, do the following:
 
 1. Within Sublime Text, bring up the [Command Palette](http://docs.sublimetext.info/en/sublime-text-3/extensibility/command_palette.html) and type `install`. Among the commands you should see `Package Control: Install Package`. If that command is not highlighted, use the keyboard or mouse to select it. There will be a pause of a few seconds while Package Control fetches the list of available plugins.
 
-1. When the plugin list appears, type `chktex`. Among the entries you should see `SublimeLinter-chktex`. If that entry is not highlighted, use the keyboard or mouse to select it.
+2. When the plugin list appears, type `chktex`. Among the entries you should see `SublimeLinter-chktex`. If that entry is not highlighted, use the keyboard or mouse to select it.
 
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings](http://sublimelinter.readthedocs.org/en/latest/settings.html). For information on generic linter settings, please see [Linter Settings](http://sublimelinter.readthedocs.org/en/latest/linter_settings.html).
