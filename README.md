@@ -1,6 +1,8 @@
 SublimeLinter-chktex
 =========================
 
+[![Build Status](https://khancdn.eu/badges.php?service=https%3A%2F%2Ftravis-ci.org%2FSublimeLinter%2FSublimeLinter-chktex.png%3Fbranch%3Dmaster)](https://travis-ci.org/SublimeLinter/SublimeLinter-chktex)
+
 This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to [ChkTeX](http://baruch.ev-en.org/proj/chktex/). It will be used with files that have use LaTeX (or LaTeXing) syntax.
 
 ## Installation
