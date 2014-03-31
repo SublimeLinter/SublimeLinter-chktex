@@ -35,7 +35,8 @@ class Chktex(PythonLinter):
     config_file = ('--localrc', 'chktexrc')
     defaults = {
         '--nowarn:,+': [22, 30],
-        '--erroron:,+': [16]
+        '--erroron:,+': [16],
+        '--inputfiles=': [0]
     }
     inline_overrides = ('nowarn', 'erroron')
     comment_re = r'\s*%'
