@@ -13,13 +13,24 @@ Before installing this plugin, you must ensure that `chktex` is installed on you
 
 If you are using a TeX distribution which does not include ChkTeX (for example MiKTeX) follow the instructions below to compile ChkTeX manually:
 
-1. Install [cygwin](http://cygwin.com/install.html) with `make` and `gcc compiler`
+1. Make sure you don't have any [spaces in the path to MikTeX](http://stackoverflow.com/questions/30378183/cygwin-make-chktex-command-not-found)
 
-2. Download [chktex](http://www.ctan.org/tex-archive/support/chktex) and save in home directory of cygwin (default is C:\cygwin\home\USER\)
+2. Install [cygwin](http://cygwin.com/install.html) with the `make` and `gcc compiler` packages
 
-3. In the cygwin bash, run `configure` and `make`
+3. Download [chktex](http://www.ctan.org/tex-archive/support/chktex) and save in home directory of cygwin (default is C:\cygwin\home\USER\)
 
-4. The resulting `chktex.exe` along with `cygwin1.dll` should now be saved in a directory which is registered in the PATH environment variable (for example %MiKTeX Install%\miktex\bin\ is appropriate)
+4. In the cygwin bash, run
+    ```
+    cd c:
+    cd cygwin64/home/USER
+    cd chktex-1.7.2
+    configure
+    make
+    make install
+    ```
+
+
+5. The resulting `chktex.exe` along with `cygwin1.dll` should now be saved in a directory which is registered in the PATH environment variable (for example %MiKTeX Install%\miktex\bin\ is appropriate)
 
 ### Linter configuration
 In order for `chktex` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
