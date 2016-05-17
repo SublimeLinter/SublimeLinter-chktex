@@ -15,7 +15,6 @@ from SublimeLinter.lint import PythonLinter, util
 
 
 class Chktex(PythonLinter):
-
     """ Provides an interface to use chktex in SublimeText with SublimeLinter3."""
 
     syntax = ('latex', 'latexing', 'latex (knitr)', 'knitr-rnw', 'latex beamer', 'latexing beamer')
