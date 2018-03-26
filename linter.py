@@ -10,7 +10,7 @@ class Chktex(PythonLinter):
         r'(?P<message>.+)'
     )
     defaults = {
-        'selector': 'text.tex.latex'
+        'selector': 'text.tex.latex',
         '--nowarn:,+': [22, 30],
         '--erroron:,+': [16],
         '--inputfiles=': [0]
