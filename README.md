@@ -33,12 +33,12 @@ If you are using a TeX distribution which does not include ChkTeX (for example M
 
 5. The resulting `chktex.exe` along with `cygwin1.dll` should now be saved in a directory which is registered in the PATH environment variable (for example %MiKTeX Install%\miktex\bin\ is appropriate)
 
-In order for `chktex` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. The docs cover [troubleshooting PATH configuration](http://sublimelinter.readthedocs.io/en/latest/troubleshooting.html#finding-a-linter-executable).
+In order for `chktex` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. The docs cover [troubleshooting PATH configuration](http://sublimelinter.com/en/latest/troubleshooting.html#finding-a-linter-executable).
 
 
 ## Settings
-- SublimeLinter settings: http://sublimelinter.readthedocs.org/en/latest/settings.html
-- Linter settings: http://sublimelinter.readthedocs.org/en/latest/linter_settings.html
+- SublimeLinter settings: http://sublimelinter.com/en/latest/settings.html
+- Linter settings: http://sublimelinter.com/en/latest/linter_settings.html
 
 By default, SublimeLinter-chktex ignores Warning 22 (Comment displayed) and Warning 30 (Multiple spaces detected in output). It also sets Warning 16 (Mathmode is still on at end of LaTeX file) as an error.
 
