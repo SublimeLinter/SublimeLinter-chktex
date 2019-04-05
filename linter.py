@@ -1,7 +1,7 @@
-from SublimeLinter.lint import PythonLinter, util
+from SublimeLinter.lint import Linter, util
 
 
-class Chktex(PythonLinter):
+class Chktex(Linter):
     cmd = 'chktex -wall "-f%l:%c %k %k %n: %m\n"'
     error_stream = util.STREAM_STDOUT
     regex = (
