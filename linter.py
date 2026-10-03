@@ -2,6 +2,7 @@ from SublimeLinter.lint import Linter, util
 
 
 class Chktex(Linter):
+    column_unit = 'utf8'
     cmd = 'chktex -wall "-f%l:%c %k %k %n: %m\n"'
     error_stream = util.STREAM_STDOUT
     regex = (
